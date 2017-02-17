@@ -5,4 +5,6 @@ package com.iramconsulting.turnosnow;
  */
 
 public class clsLogin {
+
+    String hola;
 }
