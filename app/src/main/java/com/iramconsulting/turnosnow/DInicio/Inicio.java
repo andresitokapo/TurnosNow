@@ -12,7 +12,7 @@ import android.util.Log;
 import com.iramconsulting.turnosnow.DConexionHTTP.ServerResponse;
 import com.iramconsulting.turnosnow.DConexionHTTP.clsConexcionHttpGet;
 import com.iramconsulting.turnosnow.DLogin.Login;
-import com.iramconsulting.turnosnow.DPrincipal.Principal;
+import com.iramconsulting.turnosnow.DPrincipal.MainActivity_Principal;
 import com.iramconsulting.turnosnow.R;
 import com.iramconsulting.turnosnow.cls.User;
 
@@ -108,11 +108,11 @@ public class Inicio extends AppCompatActivity {
                     @Override
                     public void run() {
                         Log.i("S_Inicio_onPost", "Handler");
-                        Intent intent = new Intent(Inicio.this,Principal.class);
+                        Intent intent = new Intent(Inicio.this,MainActivity_Principal.class);
                         startActivity(intent);
                         finish();
                     }
-                }, 2000);
+                }, 900);
 
             } else {
                 Log.i("S_Inicio_onPost", "Salio IF por NOK ");

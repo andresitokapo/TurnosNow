@@ -43,4 +43,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:24.2.1'
     compile 'org.codehaus.jackson:jackson-core-asl:1.9.13'
     compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
+    compile 'me.dm7.barcodescanner:zxing:1.9'
 }

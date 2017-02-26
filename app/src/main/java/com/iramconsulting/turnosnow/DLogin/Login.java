@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.iramconsulting.turnosnow.DConexionHTTP.ServerResponse;
 import com.iramconsulting.turnosnow.DConexionHTTP.clsConexcionHttpPost;
 import com.iramconsulting.turnosnow.DLogin.cls.clsLogin;
-import com.iramconsulting.turnosnow.DPrincipal.Principal;
+import com.iramconsulting.turnosnow.DPrincipal.MainActivity_Principal;
 import com.iramconsulting.turnosnow.R;
 import com.iramconsulting.turnosnow.cls.Access;
 
@@ -126,7 +126,7 @@ public class Login extends AppCompatActivity {
                 editor.putString("contraseña",datosLogin.getPass().toString());
                 editor.commit();
 
-                Intent intent = new Intent(Login.this,Principal.class);
+                Intent intent = new Intent(Login.this, MainActivity_Principal.class);
                 startActivity(intent);
                 finish();
 

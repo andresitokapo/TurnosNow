@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.iramconsulting.turnosnow.DPrincipal.Principal;
+import com.iramconsulting.turnosnow.DPrincipal.MainActivity_Principal;
 import com.iramconsulting.turnosnow.R;
 
 public class RegistroUsuario extends AppCompatActivity {
@@ -49,7 +49,7 @@ public class RegistroUsuario extends AppCompatActivity {
                 Toast.makeText(RegistroUsuario.this,"Felicitaciones", Toast.LENGTH_SHORT).show();
 
                 //Link principal
-                Intent intent = new Intent(RegistroUsuario.this,Principal.class);
+                Intent intent = new Intent(RegistroUsuario.this, MainActivity_Principal.class);
                 startActivity(intent);
             }
         });

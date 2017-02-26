@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/buscarqr" android:title="BuscadorQR"
+        android:icon="@drawable/buscadorqr"
+        tools:ignore="HardcodedText"
+        app:showAsAction="ifRoom"></item>
+    <item android:id="@+id/lupabuscar" android:title="Buscador"
+        android:icon="@drawable/lupabuscar"
+        tools:ignore="HardcodedText"
+        app:showAsAction="ifRoom"></item>
+    <item android:id="@+id/altaturno" android:title="AltaTurno"
+        android:icon="@drawable/ic_altaturno"
+        tools:ignore="HardcodedText"
+        app:showAsAction="ifRoom"></item>
+
+
+</menu>

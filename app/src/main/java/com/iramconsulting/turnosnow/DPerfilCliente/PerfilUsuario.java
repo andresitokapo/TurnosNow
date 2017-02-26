@@ -1,18 +1,15 @@
-package com.iramconsulting.turnosnow.DPrincipal;
+package com.iramconsulting.turnosnow.DPerfilCliente;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 import com.iramconsulting.turnosnow.R;
 
-public class Principal extends AppCompatActivity {
+public class PerfilUsuario extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_principal);
-
-        Log.i("S_Principal", "Inicio");
+        setContentView(R.layout.activity_perfil_usuario);
     }
 }

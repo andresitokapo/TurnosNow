@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +15,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DInicio.Inicio">
+        <activity
+            android:name=".DInicio.Inicio"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +27,11 @@
         <activity
             android:name=".DLogin.Login"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".DPrincipal.Principal"></activity>
         <activity android:name=".DLogin.RegistroUsuario" />
+        <activity android:name=".DPrincipal.MainActivity_Principal" />
+        <activity android:name=".DPerfilProveedor.PerfilProveedor" />
+        <activity android:name=".DPerfilCliente.PerfilUsuario" />
+        <activity android:name=".DAltaFavoritosQR.AltaFavoritoQR"></activity>
     </application>
 
 </manifest>
