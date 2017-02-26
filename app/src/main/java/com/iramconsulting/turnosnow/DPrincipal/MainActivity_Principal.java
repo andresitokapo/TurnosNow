@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.iramconsulting.turnosnow.DAltaFavoritosQR.AltaFavoritoQR;
 import com.iramconsulting.turnosnow.DAltaTurno.AltaTurno;
+import com.iramconsulting.turnosnow.DPerfilProveedor.PerfilProveedor;
 import com.iramconsulting.turnosnow.R;
 
 public class MainActivity_Principal extends AppCompatActivity implements View.OnClickListener, Fr_ListaTurnos.OnFragmentInteractionListener, Fr_Informacion.OnFragmentInteractionListener {
@@ -65,12 +66,12 @@ public class MainActivity_Principal extends AppCompatActivity implements View.On
             startActivity(siguiente);
 
         } else if (id == R.id.lupabuscar){
-            return false;
+            Intent siguiente = new Intent(this,PerfilProveedor.class);
+            startActivity(siguiente);
 
         } else if (id == R.id.altaturno){
             Intent siguiente = new Intent(this,AltaTurno.class);
             startActivity(siguiente);
-            finish();
 
         }
 
