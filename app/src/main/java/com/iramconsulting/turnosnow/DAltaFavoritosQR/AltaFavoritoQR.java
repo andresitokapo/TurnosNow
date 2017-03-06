@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
-import android.view.View;
 
 import com.google.zxing.Result;
 import com.iramconsulting.turnosnow.R;
@@ -24,15 +23,14 @@ public class AltaFavoritoQR extends Activity implements ZXingScannerView.ResultH
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alta_favorito_qr);
         Log.i("S_AltaFavoritoQR","INICIO");
-    }
 
-    public void onClick(View v){
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CAMERA},SOLICITUD_PERMISOS_CAMARA);
         mScannerView = new ZXingScannerView(this);
         setContentView(mScannerView);
         mScannerView.setResultHandler(this);
         mScannerView.startCamera();
     }
+
 
     @Override
     protected void onPause() {

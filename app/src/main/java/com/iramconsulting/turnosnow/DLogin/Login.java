@@ -112,7 +112,7 @@ public class Login extends AppCompatActivity {
             //Consultar el WS Validate
             clsConexcionHttpPost conexcionHttpPost = new clsConexcionHttpPost(url,param);
             resultado = conexcionHttpPost.clsConsultaPost();
-            Log.i("S_Login", resultado);
+            Log.i("S_Login","Resultado " + resultado);
             ServerResponse<Access> serverResponsePost = hacerPost(resultado);
             access = serverResponsePost;
 
@@ -126,9 +126,11 @@ public class Login extends AppCompatActivity {
                 editor.putString("contraseña",datosLogin.getPass().toString());
                 editor.commit();
 
-                Intent intent = new Intent(Login.this, MainActivity_Principal.class);
-                startActivity(intent);
+                Intent intent1 = new Intent(Login.this, MainActivity_Principal.class);
+                startActivity(intent1);
+                Log.i("S_Login_onPost", "Intent");
                 finish();
+
 
             } else {
                 Log.i("S_Login_onPost", "Salio IF por NOK ");
@@ -144,7 +146,7 @@ public class Login extends AppCompatActivity {
 
             Log.i("S_Login_onPost", "Dato Metadata: " + access.getMetaData().getHttpStatus().toString());
             Log.i("S_Login_onPost", "Dato User Telefono: " + access.getData().isAccepted());
-            Log.i("S_Login_onPost", "Dato User Telefono: " + access.getData().getHash().toString());
+
 
         }
 
@@ -173,7 +175,6 @@ public class Login extends AppCompatActivity {
 
         Log.i("S_clsConexionHttp", "FIINNN con dato: " + serverResponse.getMetaData().getHttpStatus().toString()+ serverResponse.getMetaData().getInfo().toString()+serverResponse.getMetaData().getMessage().toString());
 
-        Log.i("S_clsConexionHttp", serverResponse.getData().getHash().toString());
         return serverResponse;
     }
 

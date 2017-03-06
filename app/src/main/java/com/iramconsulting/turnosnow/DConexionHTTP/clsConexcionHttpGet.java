@@ -2,11 +2,8 @@ package com.iramconsulting.turnosnow.DConexionHTTP;
 
 import android.util.Log;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
+import java.io.InputStream;
+import java.net.URL;
 
 /**
  * Created by RAMOS on 17/2/2017.
@@ -26,17 +23,12 @@ public class clsConexcionHttpGet {
     public String clsConsultaGet() {
         Log.i("S_clsConsultaGet", "Inicio");
 
-        HttpClient httpClient = new DefaultHttpClient();
-        Log.i("S_clsConsultaGet", "URL" + urlIn+param);
-
-        HttpGet get = new HttpGet(urlIn+param);
-        get.setHeader("Content-type", "application/json");
 
         try {
             Log.i("S_clsConsultaGet", "TRY BACK");
+            URL url = new URL(urlIn);
+            InputStream respString = url.openStream();
 
-            HttpResponse respuesta_get = httpClient.execute(get);
-            respString = EntityUtils.toString(respuesta_get.getEntity());
             Log.i("S_clsConsultaGet", respString.toString());
             Log.i("S_clsConsultaGet", "ANTES DER SERVER");
 

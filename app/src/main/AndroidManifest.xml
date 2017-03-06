@@ -31,6 +31,7 @@
         <activity android:name=".DPrincipal.MainActivity_Principal" />
         <activity android:name=".DPerfilProveedor.PerfilProveedor" />
         <activity android:name=".DPerfilCliente.PerfilUsuario" />
+        <activity android:name=".DAltaTurno.AltaTurno" />
         <activity android:name=".DAltaFavoritosQR.AltaFavoritoQR"></activity>
     </application>
 
