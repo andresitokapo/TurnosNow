@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.iramconsulting.turnosnow.DConexionHTTP.ServerResponse;
@@ -52,18 +53,23 @@ public class AltaTurno extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Void result) {
-            Log.i("S_AltaTurno", "onPreExecute");
-            Log.i("S_AltaTurno",serverResponseGet.getData().get("1").toString());
-            Log.i("S_AltaTurno",serverResponseGet.getData().get("1").getName().toString());
-            Log.i("S_AltaTurno",serverResponseGet.getData().get("1").getAppointments().get("170304").get(0).getAppointmentTime().toString());
+            arrayList = new ArrayList<String>();
 
-            for (int i = 0; i < serverResponseGet.getData().get("1").getAppointments().get("170304").size(); i++) {
-                Log.i("S_AltaTurno", "InicioFOR" + i + serverResponseGet.getData().get("1").getAppointments().get("170304").size());
-                Log.i("S_AltaTurno", serverResponseGet.getData().get("1").getAppointments().get("170304").get(i).getAppointmentTime().toString());
-                arrayList.add(serverResponseGet.getData().get("1").getAppointments().get("170304").get(i).getAppointmentTime().toString());
+            Log.i("S_AltaTurno", "onPostExecute");
+
+            Log.i("S_AltaTurno",serverResponseGet.getData().get("1").getName().toString());
+
+            Log.i("S_AltaTurno",serverResponseGet.getData().get("1").getAppointments().get("170315").get(0).getAppointmentTime().toString());
+
+            for (int i = 0; i < serverResponseGet.getData().get("1").getAppointments().size(); i++) {
+                Log.i("S_","INICIO FOR" + i);
+                Log.i("S_AltaTurno", serverResponseGet.getData().get("1").getAppointments().get("170315").get(i).getAppointmentTime().toString());
+
+                arrayList.add(serverResponseGet.getData().get("1").getAppointments().get("170315").get(i).getAppointmentTime().toString());
+                Log.i("Resultado ARRAY",arrayList.get(i));
             }
-            /*ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(AltaTurno.this, android.R.layout.simple_list_item_1, android.R.id.text1,arrayList );
-            listView.setAdapter(arrayAdapter);*/
+            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(AltaTurno.this, android.R.layout.simple_list_item_1, android.R.id.text1,arrayList );
+            listView.setAdapter(arrayAdapter);
         }
 
         @Override
@@ -89,6 +95,8 @@ public class AltaTurno extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
         Log.i("S_Inicio_ServerResponse", "FIN SERVERRESPONSE");
 
 

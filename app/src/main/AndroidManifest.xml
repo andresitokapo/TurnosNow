@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".DInicio.Inicio"
+            android:name=".DAltaTurno.AltaTurno"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +31,7 @@
         <activity android:name=".DPrincipal.MainActivity_Principal" />
         <activity android:name=".DPerfilProveedor.PerfilProveedor" />
         <activity android:name=".DPerfilCliente.PerfilUsuario" />
-        <activity android:name=".DAltaTurno.AltaTurno" />
+
         <activity android:name=".DAltaFavoritosQR.AltaFavoritoQR"></activity>
     </application>
 
