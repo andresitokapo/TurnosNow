@@ -14,44 +14,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_cancelar"
-        android:layout_marginBottom="184dp"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Dato entrada"
-        android:ems="10"
-        android:id="@+id/etxt_dato"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/btn_consultar"
-        android:layout_alignParentStart="true" />
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner_sucursales"
-        android:layout_below="@+id/txt_respuesta"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="28dp"
-        android:dropDownWidth="match_parent" />
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="250dp"
         android:id="@+id/listview"
-        android:layout_marginTop="48dp"
-        android:layout_alignTop="@+id/button_cancelar"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/btn_consultar"
+        android:layout_alignEnd="@+id/calendarView"
+        android:layout_marginTop="257dp" />
 
     <Button
         android:text="Procesar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_consultar"
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/button_cancelar"
         android:layout_alignStart="@+id/button_cancelar" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/button_cancelar" />
 
 </RelativeLayout>
